@@ -4,6 +4,10 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.designmode.ImageThrid.DoubleCache;
+import com.example.designmode.ImageThrid.ImageLoad;
+import com.example.designmode.ImageThrid.ImageLoadConfig;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +22,10 @@ public class MainActivity extends AppCompatActivity {
 //                .keybord("")
 //                .mouse("")
 //                .build();
-
+        ImageLoadConfig config = new ImageLoadConfig.ImageLoadConfigBuilder()
+                .setImageCache(new DoubleCache())
+                .build();
+        ImageLoad.getInstance().init(config);
 
     }
 }

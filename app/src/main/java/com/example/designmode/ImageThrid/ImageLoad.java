@@ -17,21 +17,35 @@ import java.util.concurrent.Executors;
  */
 public class ImageLoad {
 
-    //通过依赖注入
-    public void setImageCache(ImageCache mImageCache) {
-        this.mImageCache = mImageCache;
-    }
-
-    private ImageCache mImageCache;
-
     //线程池， 线程数量为cpu的数量
     ExecutorService mExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
     Handler mHandler = new Handler(Looper.getMainLooper());
 
+    private ImageLoadConfig config;
+
+    private static class ImageLoadHolder {
+        private static final ImageLoad INSTANCE = new ImageLoad();
+
+    }
+
+    private ImageLoad() {
+
+    }
+
+
+    public static ImageLoad getInstance() {
+        return ImageLoadHolder.INSTANCE;
+    }
+
+    public void init(ImageLoadConfig config) {
+        this.config = config;
+    }
+
+
     //展示图片
     public void displayImage(final String url, final ImageView imageView) {
-        Bitmap bitmap = mImageCache.get(url);
+        Bitmap bitmap = config.getImageCache().get(url);
         if (bitmap != null) {
             updateImageView(imageView, bitmap);
             return;
@@ -50,7 +64,7 @@ public class ImageLoad {
                 if (imageView.getTag().equals(url)) {
                     updateImageView(imageView, bitmap);
                 }
-                mImageCache.put(url, bitmap);
+                config.getImageCache().put(url, bitmap);
             }
         });
     }
