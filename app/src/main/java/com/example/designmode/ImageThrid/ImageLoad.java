@@ -31,22 +31,6 @@ public class ImageLoad {
 
     //展示图片
     public void displayImage(final String url, final ImageView imageView) {
-
-//        imageView.setTag(url);
-//        mExecutorService.submit(new Runnable() {
-//            @Override
-//            public void run() {
-//                Bitmap bitmap = downLoadImage(url);
-//                if (bitmap == null) return;
-//                if (imageView.getTag().equals(url)) {
-//                    updateImageView(imageView, bitmap);
-//                }
-//                mImageCache.put(url, bitmap);
-//
-//
-//            }
-//        });
-
         Bitmap bitmap = mImageCache.get(url);
         if (bitmap != null) {
             updateImageView(imageView, bitmap);
