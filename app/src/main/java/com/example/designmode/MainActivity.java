@@ -4,9 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.designmode.imageThrid.DoubleCache;
-import com.example.designmode.imageThrid.ImageLoad;
-import com.example.designmode.imageThrid.ImageLoadConfig;
+import com.example.designmode.prototypePattern.ProtoTypePatternMode;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,10 +20,17 @@ public class MainActivity extends AppCompatActivity {
 //                .keybord("")
 //                .mouse("")
 //                .build();
-        ImageLoadConfig config = new ImageLoadConfig.ImageLoadConfigBuilder()
-                .setImageCache(new DoubleCache())
-                .build();
-        ImageLoad.getInstance().init(config);
+
+
+//        ImageLoadConfig config = new ImageLoadConfig.ImageLoadConfigBuilder()
+//                .setImageCache(new DoubleCache())
+//                .build();
+//        ImageLoad.getInstance().init(config);
+
+
+        ProtoTypePatternMode protoTypePatternMode = new ProtoTypePatternMode();
+        protoTypePatternMode.showDoc();
+
 
     }
 }
