@@ -1,4 +1,4 @@
-package com.example.designmode.Utils;
+package com.example.designmode.imageFirst;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

@@ -1,4 +1,4 @@
-package com.example.designmode.Builder;
+package com.example.designmode.builder;
 
 /**
  * creation date: 2019-11-20 14:53

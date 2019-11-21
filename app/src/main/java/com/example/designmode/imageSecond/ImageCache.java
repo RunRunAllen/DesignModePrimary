@@ -1,4 +1,4 @@
-package com.example.designmode.ImageSecond;
+package com.example.designmode.imageSecond;
 
 import android.graphics.Bitmap;
 import android.util.LruCache;

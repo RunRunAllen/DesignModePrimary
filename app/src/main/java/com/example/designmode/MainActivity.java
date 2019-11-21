@@ -4,9 +4,9 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.designmode.ImageThrid.DoubleCache;
-import com.example.designmode.ImageThrid.ImageLoad;
-import com.example.designmode.ImageThrid.ImageLoadConfig;
+import com.example.designmode.imageThrid.DoubleCache;
+import com.example.designmode.imageThrid.ImageLoad;
+import com.example.designmode.imageThrid.ImageLoadConfig;
 
 public class MainActivity extends AppCompatActivity {
 

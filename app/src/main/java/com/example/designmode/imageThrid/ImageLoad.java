@@ -1,4 +1,4 @@
-package com.example.designmode.ImageThrid;
+package com.example.designmode.imageThrid;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

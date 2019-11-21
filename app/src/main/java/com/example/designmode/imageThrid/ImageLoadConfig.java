@@ -1,4 +1,4 @@
-package com.example.designmode.ImageThrid;
+package com.example.designmode.imageThrid;
 
 /**
  * creation date: 2019-11-20 17:51

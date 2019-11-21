@@ -1,4 +1,4 @@
-package com.example.designmode.ImageThrid;
+package com.example.designmode.imageThrid;
 
 import java.io.Closeable;
 import java.io.IOException;
