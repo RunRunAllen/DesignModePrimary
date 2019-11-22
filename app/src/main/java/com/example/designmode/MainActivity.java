@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.designmode.prototypePattern.ProtoTypePatternMode;
+import com.example.designmode.stateMode.TvController;
+import com.example.designmode.stateModeTwo.TvControllerTwo;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,8 +30,14 @@ public class MainActivity extends AppCompatActivity {
 //        ImageLoad.getInstance().init(config);
 
 
-        ProtoTypePatternMode protoTypePatternMode = new ProtoTypePatternMode();
-        protoTypePatternMode.showDoc();
+//        ProtoTypePatternMode protoTypePatternMode = new ProtoTypePatternMode();
+//        protoTypePatternMode.showDoc();
+
+
+        //状态模式的体现
+        TvControllerTwo tvControllerTwo = new TvControllerTwo();
+        tvControllerTwo.PowerOff();
+        tvControllerTwo.nextChanner();
 
 
     }
