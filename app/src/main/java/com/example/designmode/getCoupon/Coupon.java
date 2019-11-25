@@ -1,10 +1,12 @@
 package com.example.designmode.getCoupon;
 
 /**
- * creation date: 2019-11-22 16:03
+ * creation date: 2019-11-22 17:44
  * description ：
  */
-public interface Coupon {
+interface Coupon {
 
-        void  readCoupon();
+    void realCoupon();
+
+    void fakeCoupon();
 }

@@ -1,12 +1,9 @@
 package com.example.designmode;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.designmode.prototypePattern.ProtoTypePatternMode;
-import com.example.designmode.stateMode.TvController;
-import com.example.designmode.stateModeTwo.TvControllerTwo;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +11,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        findViewById(R.id.text).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //状态模式 登录逻辑处理
+                // startActivity(new Intent(MainActivity.this, TestActivity.class));
+
+//
+//                //领券
+//                CouponConfig couponConfig = new CouponConfig.CouponConfigBuilder("real")
+//                        .isCoupon(true)
+//                        .isLeavePhone(true).build();
+//
+//                CouponController.getInstance().init(couponConfig);
+            }
+        });
 
 
         //Builder
@@ -34,11 +46,10 @@ public class MainActivity extends AppCompatActivity {
 //        protoTypePatternMode.showDoc();
 
 
-        //状态模式的体现
-        TvControllerTwo tvControllerTwo = new TvControllerTwo();
-        tvControllerTwo.PowerOff();
-        tvControllerTwo.nextChanner();
-
+//        //状态模式的体现
+//        TvControllerTwo tvControllerTwo = new TvControllerTwo();
+//        tvControllerTwo.PowerOff();
+//        tvControllerTwo.nextChanner();
 
     }
 }

@@ -5,7 +5,6 @@ package com.example.designmode.stateModeTwo;
  * description ：
  */
 public class PowerOff  implements TvState{
-
     @Override
     public void nextChanner() {
 

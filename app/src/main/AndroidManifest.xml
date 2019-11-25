@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".stateModeDemo2.TestActivity" />
+        <activity android:name=".stateModeDemo2.LoginActivity" />
     </application>
 
 </manifest>
