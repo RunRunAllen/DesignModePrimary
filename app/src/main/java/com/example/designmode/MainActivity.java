@@ -5,6 +5,10 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.designmode.factoryMode.BaoMa;
+import com.example.designmode.factoryMode.PatternFactory;
+import com.example.designmode.factoryMode.PatternFactoryIml;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -50,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
 //        TvControllerTwo tvControllerTwo = new TvControllerTwo();
 //        tvControllerTwo.PowerOff();
 //        tvControllerTwo.nextChanner();
+
+
+        //工厂模式
+        PatternFactory patternFactory = new PatternFactoryIml();
+        BaoMa car = patternFactory.createCar(BaoMa.class);
+        car.drive();
 
     }
 }
