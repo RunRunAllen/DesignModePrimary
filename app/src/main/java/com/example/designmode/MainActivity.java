@@ -5,9 +5,10 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.designmode.factoryMode.BaoMa;
-import com.example.designmode.factoryMode.PatternFactory;
-import com.example.designmode.factoryMode.PatternFactoryIml;
+import com.example.designmode.getCoupon.CouponConfig;
+import com.example.designmode.getCoupon.CouponController;
+import com.example.designmode.observer.ByCode;
+import com.example.designmode.observer.Code;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,13 +22,13 @@ public class MainActivity extends AppCompatActivity {
                 //状态模式 登录逻辑处理
                 // startActivity(new Intent(MainActivity.this, TestActivity.class));
 
-//
-//                //领券
-//                CouponConfig couponConfig = new CouponConfig.CouponConfigBuilder("real")
-//                        .isCoupon(true)
-//                        .isLeavePhone(true).build();
-//
-//                CouponController.getInstance().init(couponConfig);
+
+                //领券
+                CouponConfig couponConfig = new CouponConfig.CouponConfigBuilder("real")
+                        .isCoupon(true)
+                        .isLeavePhone(true).build();
+
+                CouponController.getInstance().init(couponConfig);
             }
         });
 
@@ -57,9 +58,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         //工厂模式
-        PatternFactory patternFactory = new PatternFactoryIml();
-        BaoMa car = patternFactory.createCar(BaoMa.class);
-        car.drive();
+//        PatternFactory patternFactory = new PatternFactoryIml();
+//        BaoMa car = patternFactory.createCar(BaoMa.class);
+//        car.drive();
+
+        //
+        Code code = new Code("haha");
+        ByCode byCode = new ByCode();
+        byCode.addObserver(code);
+
+        byCode.postMessage("啦啦啦啦啊啦啦啦啦======");
+
 
     }
 }
